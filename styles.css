@@ -41,6 +41,20 @@ p{
     font-weight:900;
     font-size: 48px;
 }
+
+.title{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.less-opacity{
+    opacity: 0.6;
+}
+.section-head{
+    font-weight: bold;
+    font-size: 48px;
+    text-align: center;
+ }
+
 /* navbar related styling */
 
 nav{
@@ -154,10 +168,7 @@ margin:0 auto;
     font-weight: 400;
     text-align: center;
 }
- .section-head{
-    font-weight: bold;
-    font-size: 48px;
- }
+
  .about-info{
     margin-top:160px;
     display: grid;
@@ -166,8 +177,90 @@ margin:0 auto;
     margin-bottom: 70px;
  }
 
+/* Why CHOOSE  Section styling */
+.choose-section{
+    text-align: center;
+}
+.card1{
+grid-area:audio ;
+max-width: 380px;
+max-height: 480px;
+/* width: 31.6%;
+height: 61.3%; */
+}
+.card2{
+grid-area:mobile ;
+max-width: 790px;
+max-height: 225px;
+/* width: 65.83%;
+height: 28.73%; */
+}
+.card3{
+grid-area:global ;
+max-width: 790px;
+max-height: 225px;
+/
+}
+.card4{
+grid-area:exclusive ;
+max-width: 790px;
+max-height: 273px;
+/* width: 31.6%;
+height: 34.86%; */
+}
+.card5{
+grid-area: rich;
+max-width: 380px;
+max-height: 273px;
+/* width: 65.83%;
+height: 34.86%; */
+}
+.card-section{
+    display: grid;
+    gap: 30px;
+margin-top:40px ;
+grid-template-columns: repeat(6,1fr);
+    grid-template-areas: 
+    "audio audio mobile mobile  mobile mobile"
+    "audio audio    global  global global global "
+    "exclusive exclusive exclusive  exclusive rich rich"
+   "exclusive exclusive exclusive  exclusive rich rich";
+}
+.card{
+    display: grid;
+    gap: 16px;
+    padding:40px 40px;
+    border-radius: 40px;
+    background-color: #351165;
+    text-align: left;
+}
 
 
+/* Featured Section  related styling*/
+
+.featured-section{
+    padding: 120px 12.5%;
+    display: grid;
+}
+.episodes{
+    display: flex;
+    max-width: 1200px;
+    max-height: 600px;
+    gap: 30px;
+    justify-content: center;
+  margin-top: 40px;
+}
+.episode-embed-card{
+    background-color: #250D44;
+        max-width: 380px;
+        width: 31.6%;
+    max-height: 600px;
+    height: 100%;
+}
+.episode-embed-card iframe{
+    width: 100%;
+    height: 75%;
+}
  /* Responsive  */
  @media screen and (max-width:576px) {
     nav{
@@ -195,5 +288,23 @@ display: none;
     gap: 40px;
     }
 
+    .choose-section{
+        padding: 40x 20px;
+    }
+    .card-section{
+        grid-template-columns: repeat(1,1fr);
+        grid-template-areas: 
+        "audio"
+        "mobile"
+        "global"
+        "exclusive"
+        "rich";
+        gap: 16px;
+    }
+    .card{
+        padding: 24px;
+        gap: 16px;
+    }
 } 
+
 
