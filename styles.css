@@ -100,17 +100,26 @@ nav .menu{
 
 .banner{ 
     width: 100%;
-    max-width: 1600px;
+
     height: auto;
      background-image: url(./assets/hero-bg.png);
-     background-repeat: no-repeat;
-     background-position: center;
-     background-size: contain;
+     background-position:0 center;
+     background-size:auto 100%;
      display: grid;
+     place-items: center;
      justify-content: center;
      align-items: center;
-     
+     background-repeat: repeat-x; 
+  animation: moveBackground 10s linear infinite; 
 } 
+@keyframes moveBackground {
+  from {
+    background-position-x: 0; 
+  }
+  to {
+    background-position-x: 100% ; 
+  }
+}
 .banner  .banner-container{
     display: flex;
     flex-direction: column;
