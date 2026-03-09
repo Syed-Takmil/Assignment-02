@@ -77,6 +77,7 @@ gap:19%;
 padding:16px 12.5% ;
    position:sticky;
    z-index:10;
+   box-shadow:1px 1px 2px solid #412567;
 
 }
 nav .menu{
